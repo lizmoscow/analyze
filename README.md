@@ -9,8 +9,8 @@ Packages:
 2. theano  
 'conda install mingw libpython theano=0.8'
 3. tensorflow (optional)
-'pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.1-cp35-cp35m-win_amd64.whl'
-or 
+'pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/cpu/tensorflow-1.0.1-cp35-cp35m-win_amd64.whl'  
+or  
 'pip install --ignore-installed --upgrade https://storage.googleapis.com/tensorflow/windows/gpu/tensorflow_gpu-1.0.1-cp35-cp35m-win_amd64.whl'
 3. keras  
 'conda install -c conda-forge keras'
