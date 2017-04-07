@@ -48,7 +48,7 @@ MLP = 1
 KERAS = 1
 LASAGNE = 1
 
-data = pd.read_csv('drivers_250000.csv')
+data = pd.read_csv('drivers_50000.csv')
 
 data.at[data['Accidents'] > 0, 'AccidentsBin'] = 1
 data.at[data['Accidents'] == 0, 'AccidentsBin'] = 0
