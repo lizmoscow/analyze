@@ -135,6 +135,7 @@ def grid_results_to_df(grid):
     results = results.sort_values(by='rank_test_score')
     return results
 
+
 print("### Logistic Regression")
 lr = LogisticRegression()
 lr.fit(X_train, y_train)
@@ -187,8 +188,9 @@ if MLP == 1:
 
 if GBT == 1:
     gbt = ensemble.GradientBoostingClassifier()
-    param_grid = {'n_estimators': [i for i in range(100, 400, 50)], 'learning_rate': [0.1,0.15,0.2],
-                  'loss': ['deviance', 'exponential'],'subsample':[0.2,0.5,0.7]}
+    param_grid = {'n_estimators': [i for i in range(55, 200, 50)], 'learning_rate': [0.1, 0.15, 0.2],
+                  'loss': ['deviance', 'exponential'], 'subsample': [0.2, 0.5, 0.7], 'max_depth': [3, 4, 5],
+                  'min_samples_leaf': [1, 2, 3], 'max_features': [4, None]}
     grid = GridSearchCV(estimator=gbt, param_grid=param_grid, scoring=total_competition_score, verbose=1)
     print("### GBT")
     grid.fit(X_train, y_train)
